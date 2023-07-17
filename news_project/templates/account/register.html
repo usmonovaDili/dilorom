@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %} Ruyxatdan o'tish {% endblock title %}
+
+{% block content %}
+
+<h1>Ruyxatdan o'tish</h1>
+    <p>Ruyxatdan o'tish uchun quydagi malumotlarni kiriting </p>
+
+    <form method="post">{% csrf_token %}
+    {{ user_form.as_p }}
+        <button type="submit">Ruyxatdan o'tish</button>
+    </form>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %} Nuqtayi Nazar xabarlar {% endblock title %}
+
+{% block content %}
+
+{% for news in nutq_news %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <a href="{{ news.get_absolute_url }}"><img src="{{ news.image.url }}" alt="{{ news.title}}" style="width:40%"></a>
+            <h4>{{ news.title}}</h4>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}
+
+
+

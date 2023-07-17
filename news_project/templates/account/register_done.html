@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %} Ruyxatdan utish tugalandi {% endblock title %}
+
+{% block content %}
+
+<h1>{{ new_user.first_name}} Xush kelibsiz </h1>
+    <p>Muvaffaqiyatli ruyvatdan o'tdingiz! Saytga kirish uchun <a href="{% url 'login' %}">login</a>qilishingiz mumkin</p>
+
+{% endblock content %}
